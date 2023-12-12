@@ -1,5 +1,7 @@
+import math.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Power.iterativeEffSol(2,10);
     }
 }
