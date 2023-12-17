@@ -1,7 +1,9 @@
-import recursion.*;
+import arrays.*;
 
 public class Main {
     public static void main(String[] args) {
-        PossibleWodsFromPhoneDigit.run(new int[]{7,8,9});
+
+        EquilibriumPoint.run(new int[]{4,2,2});
+
     }
 }
