@@ -12,6 +12,8 @@ public class MaxSubArraySum {
     *
     * if you can observe - max of ending i = max (max(i-1) + curr[i]  or curr[i])
     *
+    * THis is kadanes algorithm
+    *
     * */
 
     public static void run(int[] arr){
