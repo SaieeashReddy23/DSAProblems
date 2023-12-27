@@ -1,10 +1,9 @@
-import arrays.*;
-import searching.*;
-import searching.SmallestPositiveMissingNumber;
-import searching.SubArrayWithGivenSum;
+import sorting.*;
 
 public class Main {
     public static void main(String[] args) {
-        SubArrayWithGivenSum.run(new int[]{1,2,3,7,5},12);
+
+        SortAnArrayWithThreeTypes.run(new int[]{0,1,1,2,0,1,2,0,1,2,2,2,0,0,0,1,1});
+
     }
 }
