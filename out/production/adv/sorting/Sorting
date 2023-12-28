@@ -1,0 +1,55 @@
+Overview of sorting algorithm :-
+
+
+        1.binary array :- Partition of Quicksort (Lomato , hoarse , Naive)
+
+        2.Array of three values :- also can be done using partition of quicksort (lomato , hoarse )
+
+                                   -> like 0's,1's , 2's
+                                   -> some range  , elements less than range left and elements greater than that range right.
+
+
+        3. Array of size n and small ranges values -  Counting sort algorithm
+
+        4. Array of size n and range is of size n^2 or n^3 or closer -  Radix sort algorithm
+
+        5. Array of uniformly distributed data over a range -  bucket sort
+
+        6. When memory writes are costly -  cycle sort , selection sort
+
+        7. when adjacent swaps are allowed -  Bubble sort , Coctail sort (optimized version of bubble sort)
+
+        8. When array size is small - Selection sort , Insertion sort (best)
+
+        9. When available extra memory is less - Shell sort
+
+
+
+
+
+-> General purpose sorting algorithms :-
+
+            -> Merge sort
+
+            -> Heap sort
+
+            -> QUick sort
+
+
+            Notes :-
+
+                   1. Merge sort and quick sort  have divide and conquer approach
+
+                   2. Meger sort is stable , but quick and heap are not stable
+
+                   3. merge and heap have time complxity of nlogn , but quick has worst case of n^2
+
+                   4. Quick is fast on an average
+
+
+
+-> Hybrid sorting algorithms (use din libraries)
+
+                  -> Tim sort - (insterion and merge sort)
+
+                  -> Introsort - (quick sort , heapsort and insertgin sort)
