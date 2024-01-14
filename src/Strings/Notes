@@ -1,0 +1,85 @@
+
+-> String :-
+
+        -> A sequence of characters.
+
+        -> In Java every character uses utf-16
+
+        -> Java uses - UTF - 16 (Unicode characters)  , 16 bit ,
+
+        -> Ascii values :-  a - z (97 - 123)
+
+                            A - Z ( 65 - 91)
+
+
+
+        -> Strings in java :-
+
+                -> String class - immutable
+
+                -> StringBuffer class - mutable , Thread safe
+
+                -> StringBuilder class - mutable , not thread safe
+
+
+
+
+             Note :-  if you use String literals ("hello") then they will be allocated same memmory.
+
+
+             -> String functions :-
+
+                    -> Length
+
+                    -> charAt
+
+                    -> SubString
+
+                    -> contains
+
+                    -> equals
+
+                    -> compareTo
+
+                    -> indexOf
+
+
+
+
+
+-> Overview of pattern searching porblems :-
+
+        -> print all the indexes where the pattern matches - popular questions in this model
+
+
+        -> comparing diff algorithms :-
+
+                m -> pattern length
+                n -> text length
+                1 <= m <= n
+
+
+        -> No Preprocessing :-
+
+            -> Naive approach          - O((n-m+1)*m)
+
+            -> Naive when all           - O(n)
+
+               characters are distinct
+
+
+        -> Preprocess Pattern :-
+
+             -> Robin Karp : O((n-m+1)*m)  -  But better than naive on average
+
+             -> KMP : O(n)
+
+             -> Z algorithm -  simple implementation
+
+             -> boys algorithm -
+
+
+        ->  Preprocess Text
+
+              -> Suffix tree : O(m)
+

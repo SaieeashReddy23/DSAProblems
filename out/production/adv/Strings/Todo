@@ -1,0 +1,14 @@
+
+1. KMP Algorithm :-
+
+        -> It is complicated but has 2 steps in it  - Do it now mind not working
+
+                -> 1st step is to find the lps array (longest prefix and suffix length)
+                -> using this to find the pattern match in linear time
+
+
+
+
+2.LongestSubstringWithDistinctCharcters
+
+           -> mind pani chaeyatle , see most eff sol which will run in O(n)

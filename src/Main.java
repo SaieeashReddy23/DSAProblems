@@ -1,10 +1,10 @@
 
-import Hashing.*;
+import Strings.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        CountNoOfSubArraysWithGivenSum.run(new int[]{10,2,-2,-20,10},-10);
+        LeftMostNonRepeatingCharacter.run("hello");
 
     }
 
