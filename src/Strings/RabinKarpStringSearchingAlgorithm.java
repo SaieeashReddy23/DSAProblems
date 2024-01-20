@@ -32,6 +32,7 @@ public class RabinKarpStringSearchingAlgorithm {
 
         int window = hashFunction(textArr ,  n , d);
 
+
         for(int i=0; i < m-n+1; i++){
             if(window == p && compareStrings(textArr , patArr , i)){
                 System.out.println("Pattern matched at index : " + i);
@@ -64,4 +65,7 @@ public class RabinKarpStringSearchingAlgorithm {
 
         return sum;
     }
+
+
+
 }
