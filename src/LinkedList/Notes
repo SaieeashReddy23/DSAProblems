@@ -1,0 +1,37 @@
+1. Flyod cycle detection :-
+
+        -> used to detect a loop in a linked list
+
+        -> we will hav slow and fast pointers  , slow moves at 1 and fast moves at 2
+
+        -> when they meet it means a loop is detected
+
+        -> when they enter the loop the distance between them will be k and it will be incresing by 1 for each , they will meeet
+            at a point when k is lenght of the loop
+
+        -> why we are move only twice at speed is it wmight miss the slow pointer if we move at 3 or 4 speed.
+
+
+
+
+        1. FInd length of loop :
+
+                        -> from the meeting point using floyed agorithm move one pointer untill other pointer meets , you will have lenght of loop
+
+
+        2. Remove loop :-
+
+                        -> From the meeting point , move fast at 1 speed and move slow pointer at 1 speed from the beginning head .
+                            Their meeting point is the start of the loop , by this set before elemnt next to null
+
+
+
+                        -> Proof :- The distance from first meeting point is same as distance from the head to stating point of loop
+
+                                    -> Becoz m + k is multiple of n
+
+                                            m -  length from head to starting of loop
+
+                                            k - lenght from starting of loop to meeting of fast and slow
+
+                                            n - lenght of the loop
