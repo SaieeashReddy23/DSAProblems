@@ -27,18 +27,19 @@ public class DetectLoopAndRemoveLoop {
 
         slow = head;
 
-        while(slow.getNext() != fast.getNext()){
-            slow = slow.getNext();
-            fast = fast.getNext();
+        if(slow != fast ){
+            while(slow.getNext() != fast.getNext()){
+                slow = slow.getNext();
+                fast = fast.getNext();
+            }
+            fast.setNext(null);
+        }else{
+            while(fast.getNext() != head){
+                fast = fast.getNext();
+            }
+
+            fast.setNext(null);
         }
-
-
-        fast.setNext(null);
-
-
-
-
-
     }
 
 }
