@@ -4,99 +4,101 @@ import java.util.HashMap;
 
 public class LRUCacheDesign {
 
-    private int MAX_SIZE;
-    private int currSize;
 
-    private DoublyLinkedNode head;
 
-    private DoublyLinkedNode tail;
+    /*
+    * Idea: using a doubly linked List and HashMap
+    *
+    *       -> The head and tail will be seperate node no values will be there inside it , so that it would be easy
+    *
+    *           when coding
+    *
+    *
+    * */
 
-    private HashMap<Integer , DoublyLinkedNode> map;
-
-    public LRUCacheDesign(int  maxSize){
-        this.MAX_SIZE = maxSize;
-        this.map = new HashMap<>();
+    private class Node {
+        Integer key;
+        Integer val;
+        Node prev;
+        Node next;
+        Node(Integer key , Integer val){
+            this.key = key;
+            this.val = val;
+        }
     }
 
+    private int capacity;
+    private static Node head;
+    private static Node tail;
+    private  HashMap<Integer , Node> cache;
+    //Constructor for initializing the cache capacity with the given value.
+    LRUCacheDesign(int cap)
+    {
+        capacity = cap;
+        cache = new HashMap<>();
+        head = new Node(null , null);
+        tail = new Node(null , null);
+        head.next = tail;
+        tail.prev = head;
+    }
 
+    //Function to return value corresponding to the key.
+    public int get(int key)
+    {
+        // your code here
+        if(cache.containsKey(key)){
+            Node node = cache.get(key);
+            moveToHead(node);
+            return  node.val;
+        }
+        return -1;
+    }
 
-    public void refer(int x){
-
-        boolean isHit = map.containsKey(x);
-
-
-
-        if(isHit){
-            System.out.println(x +" is a HIT");
-            DoublyLinkedNode node = map.get(x);
-
-            if(node == head){
-
-            }else if (node == tail){
-                DoublyLinkedNode prevNode =  node.getPrev();
-                prevNode.setNext(null);
-                tail = prevNode;
-                insertAtHead(node);
-            }else {
-                DoublyLinkedNode prevNode =  node.getPrev();
-                DoublyLinkedNode nextNode =  node.getNext();
-                prevNode.setNext(nextNode);
-                nextNode.setPrev(prevNode);
-                node.setPrev(null);
-                node.setNext(null);
-                insertAtHead(node);
+    //Function for storing key-value pair.
+    public void set(int key, int val)
+    {
+        if(!cache.containsKey(key)){
+            Node node = new Node(key , val);
+            if(cache.size() == capacity){
+                removeTail();
+                cache.remove(key);
             }
-
+            addToHead(node);
+            cache.put(key , node);
         }else{
-            System.out.println(x +" is a Miss");
-            DoublyLinkedNode node = new DoublyLinkedNode(x);
-            map.put(x , node);
-            if(currSize == MAX_SIZE){
-                deleteAtTail();
-                insertAtHead(node);
-            }else{
-                currSize++;
-                insertAtHead(node);
-            }
+            Node node = cache.get(key);
+            node.val = val;
+            moveToHead(node);
+            cache.put(key , node);
         }
-
-        print();
     }
 
 
-    private void insertAtHead(DoublyLinkedNode node){
-        if(head == null){
-            head = node;
-            tail = node;
-            return;
-        }
-
-        node.setNext(head);
-        node.setPrev(null);
-        head.setPrev(node);
-        head = node;
+    public void removeNode(Node node){
+        Node prevNode = node.prev;
+        Node nextNode = node.next;
+        prevNode.next = nextNode;
+        nextNode.prev = prevNode;
     }
 
-    private void deleteAtTail(){
-        DoublyLinkedNode prevNode = tail.getPrev();
-        prevNode.setNext(null);
-        tail = prevNode;
+    public void addToHead(Node node){
+        Node nextNode = head.next;
+        node.next = nextNode;
+        nextNode.prev = node;
+        head.next = node;
+        node.prev = head;
     }
 
 
-
-    public void print(){
-        System.out.println("current size is : " + currSize);
-        DoublyLinkedNode curr =  head;
-        while(curr !=  null){
-            System.out.print(curr.getVal() + " ");
-            curr = curr.getNext();
-        }
-        System.out.println();
+    public void moveToHead(Node node){
+        removeNode(node);
+        addToHead(node);
     }
 
-
-
-
+    public void removeTail(){
+        Node prevNode = tail.prev;
+        cache.remove(prevNode.key);
+        removeNode(prevNode);
+    }
 
 }
