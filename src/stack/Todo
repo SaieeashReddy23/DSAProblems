@@ -1,0 +1,52 @@
+
+Some Notes :-
+
+
+    -> Infix   : x+y
+    -> PostFix : xy+
+    -> Prefix  : +xy
+
+
+    Adv :-
+
+        -> Dont require parenthesis , procedure rules and associativity rules
+
+        -> Can be evaluated by writing a program that traverses the given expression only once (prefix and postfix)
+
+
+
+    -> Precedence :  ^ >  * , / , + , -
+
+    -> Associativity : whether left to right or right to left  , if having same precedence
+
+                        ^ - right to left associativy
+                        * , / -> left to right
+                        + , - -> left to right
+
+
+
+
+========================================================================================
+
+
+
+1. Largest Rectangular area in a histogram :-
+
+            -> Check efficient solution , mind not working
+
+
+
+
+2. Do evaluate expressions for multiple digits also for post and prefix
+
+
+
+3. Prefix calc and eval
+
+
+4. Celebrity problem - mind ki artham avvatle
+
+
+5 Maximum of minimum of every window size;
+
+
