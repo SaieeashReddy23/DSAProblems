@@ -1,0 +1,10 @@
+
+
+Questions you can try out :-
+
+
+    1. Stack implementation using queue by making push costly and also pop costly
+
+    2. Implement stack using a single queue
+
+    3. Implement queue using stakc - enque costly , deque costly and also single stack
