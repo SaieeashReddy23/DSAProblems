@@ -1,14 +1,14 @@
 
-import LinkedList.*;
-import stack.*;
+import Queue.*;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
 
-        InfixToPostFix.run("x+y*z/w+u");
+        int[] pet = {50,10,60,100};
+        int[] dist = {30,20,100,10};
 
-//        InfixToPrefix.run("x^y^z");
-
+        FirstCircularTour.run(pet,dist);
 
     }
 
