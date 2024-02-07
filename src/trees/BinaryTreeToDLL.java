@@ -8,6 +8,13 @@ public class BinaryTreeToDLL {
 
     public static void run(Node root){
         method1(root);
+
+
+//        For circular linked list connect prev and head
+
+        System.out.println( "Prev val " + prev.val);
+        System.out.println( "Head val " + head.val);
+
         print();
     }
 
