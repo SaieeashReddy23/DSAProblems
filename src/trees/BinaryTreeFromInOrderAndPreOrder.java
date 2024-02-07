@@ -23,7 +23,10 @@ public class BinaryTreeFromInOrderAndPreOrder {
     * */
 
 
-    public static void run(int[] inorder , int[] preOrder  ){}
+    public static void run(int[] inorder , int[] preOrder  ){
+
+
+    }
 
 
     public static Node method1(int[] inOrder , int[] preorder , int start , int end){
