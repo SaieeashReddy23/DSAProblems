@@ -10,6 +10,9 @@ import java.util.TreeMap;
 * Idea : use a treemap which has key as the distance and stores all the nodes in that vertical line
 *
 *
+* //To print in the same order use BFS
+*
+*
 *   -> with this you can print topview and bottomview of a binary tree
 *
 * */
@@ -24,6 +27,7 @@ public class VerticalTraversalOfBinaryTree {
 
         for(Map.Entry<Integer , ArrayList<Integer>> e : map.entrySet()){
             System.out.println(e.getKey() + " : "+ e.getValue().toString());
+
         }
 
 
@@ -41,6 +45,7 @@ public class VerticalTraversalOfBinaryTree {
             map.get(dist).add(root.data);
         }else{
             ArrayList<Integer> arr = new ArrayList<>();
+
             arr.add(root.data);
             map.put(dist , arr);
         }
