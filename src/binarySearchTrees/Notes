@@ -1,0 +1,92 @@
+Binary Search tree :-
+
+
+        -> With BST you do Search , insert , delete , find closest in O(logn) time .
+
+        -> sorte traversla will be O(n)
+
+
+        -> Data is arranged in such a way that for every node , left side data is smaller and right side data is greater
+
+
+
+
+AVL Tree :-
+
+    -> conditions :-
+
+            1. It is a BST (Left is small and right is greater)
+
+            2. it is balanced , meaning balance factor is <=1
+
+                                        balance factor  = |lh-rh| balance
+
+
+
+   -> You form a Self balancing BST during instertiona and deletion
+
+   -> instert the value similar to BST and then go up and check if balance factor is less than or equal to 1 , if not then they are not balanced and try to
+
+        balance the bST by rotating left or right
+
+
+   ->  Rotation is a contant time operation
+
+
+   -> If left left : single roatation
+
+           right , right : single rotation
+
+           left , right : Double
+
+           right , left : Double
+
+
+
+
+
+Red black tree :-
+
+
+        -> Heigh is loose , compared to AVL trees where balance factor to be <= 1;
+
+
+        -. Rules for Red black tree :-
+
+                -> Every node is either red or black
+
+                -> Root is always black
+
+                -> No two consecutive Reds
+
+                -> Number of black nodes from every nodes to all its decendents leaves should be the same
+
+                            -> black height in all paths should be same
+
+
+
+                -> Number of nodes on the path from a node to its farthest decendant leaf should not be more than
+
+                    twice than the number of nodes on the path to its closest decendant leaf
+
+
+
+Applications of BST :-
+
+            -> To maintain sorted stream of data ( or sorted set of data)
+
+            ->  To implement doubly ended priority queue (has both max and min)
+
+            -> to solve problems like :-
+
+                        -> count smaller/greater elements in a stream
+
+                        -> Floor/ ceiling /greater /smaller in a stream
+
+
+
+
+            -> If only search , insert , delete best option to use is hashtable
+
+            -> With above three if more requirement like sort  etc then BST is the best
+
