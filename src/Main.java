@@ -27,8 +27,8 @@ public class Main {
 //        root.right.left.left = new Node(6);
 
 
-
-        VerticalTraversalOfBinaryTree.run(root );
+//
+//        VerticalTraversalOfBinaryTree.run(root );
 
 //        Node root = new Node(50);
 //        FindKthSmallest.insert(root , 20);
@@ -45,6 +45,10 @@ public class Main {
 //
 //        FindKthSmallest.findKthSmallest(root , 11);
 
+
+        int[] pre = {7,4,12,3,6,8,1,5,10};
+
+        ConvertLevelorderTraversalToBST.run(pre);
     }
 
 
