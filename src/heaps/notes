@@ -1,0 +1,47 @@
+Binary Heap data Structure :-
+
+
+        -> It is used for heapsort
+        -> It is mainly used a priority queue
+
+        -> Priotrity queue 2 types :-
+
+                    -> min heap -> lowest value will have the highest priority
+
+                    -> Max heap -> Hightest value will have the highest priority
+
+
+
+
+        -> Binary Heap is a complete binary tree ( stored in  an array)
+
+              -> complete binary tree means , all levels are filled except the last level and that too last level
+
+                  is filled from left to right.
+
+
+
+              -> to get index of left child  - 2*i + 1
+
+                                 right child  -  2*i + 2
+
+                                 parent    -  floor of (i-1)/2
+
+
+                -> Advantages of stiring in array :-
+
+                                   -> cache friendly ness
+                                   -> fast access
+                                   -> less memory storage
+                                   -> min possible height
+
+
+
+
+
+        -> Min heap :-
+
+                -> it is a complete binary tree in which every node is smaller than its descendents
+
+                -> Note it is stored in a array
+
