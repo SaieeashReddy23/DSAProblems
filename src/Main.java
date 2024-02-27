@@ -1,17 +1,14 @@
-import binarySearchTrees.*;
-import heaps.BinaryHeapImplementation;
+import heaps.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = {10,5,20,2,4,8 };
+        int[][] arr = {{10,20},{5,15},{4,9,11}};
 
-        BinaryHeapImplementation heap = new BinaryHeapImplementation(arr ,  20);
-
-        heap.buildHeap();
-
-        heap.print();
-
+        MergeKSorteArrays.run(arr);
 
 
     }
