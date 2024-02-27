@@ -20,9 +20,9 @@ public class BinaryHeapImplementation {
     *
     *                           -> find min of left , right and that index , if min != index then swap with this left or right
     *
-    *               -> extact-min - replace root with last index and the heapify
+    *               -> extact - min - replace root with last index and the heapify
     *
-    *               -> decrease- key - value of a index is decreased - now compare with parent and swap if that is < parent
+    *               -> decrease - key - value of a index is decreased - now compare with parent and swap if that is < parent
     *
     *               -> delete  - place last element at its index and then do heapify down
     *
