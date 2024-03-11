@@ -1,0 +1,200 @@
+Graph data structure :-
+
+        -> We use graph data structure when there is random connection between nodes
+
+        -> graph is represented like G(V,E) -> v is  vertices and E is edges
+
+        -> Directed vs undirected graphs :-
+
+                    -> undirected graphs can we written as v1 to v2 or v2 to v1
+                                -> ex : social network
+                    -> directed graphs is v1 to v2 not equal to v2 to v2
+
+                                -> ex:- www , one page link to another
+
+        ->degree :-
+
+                -> undirected graph :-
+
+                        -> No of edges passing thorugh a vertex
+
+                        -> sum of degrees of all nodes = 2*E  - here E is no of edges
+
+                        -> max no of edges = (v*(v-1))/2  - here all nodes are connected to all nodes
+
+                -> directed graph :-
+
+                         -> has 2 degrees inDegree and outdegree
+
+                         -> no of edges coming into is indegree and going out is outdegree
+
+                         -> sum of indegrees = E - no of edges
+                         -> sum of OutDegrees = E - no of edgres
+
+                         -> max no of edgres = (v*(v-1))/2 - here all nodes are connected to all nodes
+
+
+        -> Walk :-
+
+               -> A seqence of vertices we get by following edges
+
+
+        -> path :-
+
+                -> similar to walk , but no repetition of vertices is allowed
+
+
+        -> cyclic :-
+
+                -> a graph is called cyclic , if there exists a walk which starts and ends with same vertex
+
+
+         Note :-
+
+               -> directed acyclic graphs (DAG) have many uses and purposes
+
+
+        Weighted graphs :-
+
+                -> I these types of graphs weights are assigned to edges
+
+                   -> example :- maps
+
+
+
+Graph representation :-
+
+        -> Adjacency matrix
+
+                -> create a matrix of size v*v , then if no edge from v1 to v2 then value is 0 , else it is 1
+
+                -> How to handle vertices with arbitary names - use additional hashMap datastructure to store vertex number for a string
+
+                -> for undirected graph , upper and lower triangles are same , it forms a symmetric matrix
+
+                -> properties :-
+
+                        -> space neded v*V;
+
+                        -> check if u an v are adjacent - O(1)
+                        -> find all vertices adjacent to u - O(V)
+                        -> find degree of U - O(v)
+                        -> add/remove an edge - O(1)
+                        ->  add/remove a vertex - O(v^2)
+
+        -> Adjacency list :-
+
+                -> problems with adjacenecy matrix is it is storing redunant informations.
+
+                -> representations we use : array of lists
+
+                                                -> dynamic sized arrays
+
+                                                -> linked lists
+
+
+
+                -> Space : O(V+E)  - for directed graphs
+
+                            O(V+2E) - for undirected graphs
+
+
+                -> operations :-
+
+                        -> Check if there is an edge from u to v - O(V)
+                        -> find all adjacent of V - O(degree(U)
+                        -> find degree of U - O(1)
+                        -> add an edge -O(1)
+                        -> Remove an edge - O(V)
+
+
+
+-> Adjacenecy list vs adjacenecy matrix :-
+
+
+            Note :-
+
+                    for undirectded graph
+
+                        o <= E <= V*(v-1)/2
+
+
+                    for directed graph
+
+                         o <= E <= v*(v-1)
+
+
+
+
+                                        list              |            matrix
+
+           ->  memory                  O(v+E)                          O(V*V)
+
+           -> check if there is an      O(V)                            O(1)
+               edge from u to v
+
+
+           -> Find all adja of U         O(degree(U))                   O(V)
+
+           -> add an edge               O(1)                            O(1)
+
+           -> Remove an edge            O(V)                            O(1)
+
+
+
+           -> graphs which have less edges are called sparse graphs and more edges called dense graphs
+
+           -> overall ajaceneyc list is better becoz of low memory size and fast  to find all adjacents
+
+
+
+
+-> Applications of BFS :-
+
+            -> SHortest path in an unweighted Graph
+            -> Ceawlers in search engines
+            -> Peer to peer networks
+            -> Social Networking search
+            -> In garbage collections
+            -> Cycle detection
+            -> Ford Fulkerson algorithm
+            -> Broad casting
+
+
+
+-> Applications of DFS :-
+
+            -> Cycle Detections
+            -> topological sorting
+            -> Strongly connected components :-
+
+                        -> two popular algorithms : kosaraju and tarjan
+
+            -> Solving maze and similar puzzles
+            -> Path finding
+
+
+
+
+
+To look at :-
+
+        -> you need to look at
+
+                    -> Articualtion ppoint
+
+                    -> Bridges
+
+                    -> Kruskals algorithm
+
+                    - Tarzans algorithm
+
+
+
+
+
+
+
+
+
+

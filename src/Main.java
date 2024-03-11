@@ -1,17 +1,34 @@
+import graphs.*;
 import heaps.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        int[][] arr = {{10,20},{5,15},{4,9,11}};
+        GraphAdjacencyList graph = new GraphAdjacencyList(5);
 
-        MergeKSorteArrays.run(arr);
+        graph.add(1,0);
+        graph.add(0,2);
+        graph.add(2,1);
+        graph.add(0,3);
+        graph.add(3,4);
 
+//
+//        graph.add(2,4);
+//        graph.add(3,2);
+
+//        graph.add(2,3,6);
+//
+//        graph.print();
+//
+//        System.out.println();
+//
+//        KosaRajuAlgorithm.run(graph );
+
+
+        int[] kpos = {4,5};
+        int[] tar = {1,1};
+
+        StepsByKnight.run(kpos , tar , 6);
 
     }
-
-
 }
